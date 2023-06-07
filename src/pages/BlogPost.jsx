@@ -13,7 +13,7 @@ function Blog() {
     const [content, setContent] = useState();
     const [dateTime, setDateTime] = useState(new Date());
 
-    const props = {
+    /*const props = {
         components: {
             code: (props) => {
                 const match = /language-(\w+)/.exec(props.className || '')
@@ -22,7 +22,7 @@ function Blog() {
                   : <code className={props.className} {...props} />
             }
         }
-    }
+    }*/
 
     useEffect(() => {
         import(`./posts/${slug}.mdx`).then((data) => {
