@@ -42,7 +42,7 @@ function Blog() {
             <p className="text-gray-400 dark:text-gray-500 text-center block" dateTime={dateTime}>
                 {dateTime.toLocaleDateString("en-US")} • {dateTime.toLocaleTimeString("en-US")}
             </p>
-            <article className="m-auto mt-16 prose dark:prose-invert">
+            <article className="m-auto mt-16 prose dark:prose-invert max-w-4xl">
                 {content ?? <>Not found</>}
                 <hr className="mt-16"/>
             </article>
