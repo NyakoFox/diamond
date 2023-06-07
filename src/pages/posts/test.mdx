@@ -1,0 +1,91 @@
+export const meta = {
+  title: 'Doesn\'t everyone have one of these?',
+  description: `Everyone's first React project is a blog, isn't it?`,
+  date: 1686086481
+}
+
+# Okay so I made a blog.
+
+So like, everyone's first React project is a blog. Like, every time I see a React tutorial, it's like, let's make a blog!
+And I guess a blog is a pretty good way to learn React.
+
+So I thought, hey, you know what? What if I did one too? So I made one. Don't look at the code.
+
+Pages are written in [MDX](https://mdxjs.com/), with a meta object at the top of the file, looking something like the following:
+
+```jsx
+export const meta = {
+  title: 'Doesn\'t everyone have one of these?',
+  description: `Everyone's first React project is a blog, isn't it?`,
+  date: 1686086481
+}
+```
+
+Ignore how there's no syntax highlighting... I'll get to that later.
+
+So, `BlogPost.jsx` dynamically imports the `.mdx` file using the slug in the URL, then renders it.
+
+I've felt like I've just been stumbling through this project, with the actual dynamic page rendering taking most of the time.
+Figuring out how to dynamically load the `.mdx` files was pretty tough,
+and I haven't even figured out how to list all of the files yet for the main blog page.
+
+Copilot also reminded me that I haven't figured out syntax highlighting despite there being a [guide on it](https://mdxjs.com/guides/syntax-highlighting/).
+
+Honestly, I'm holding back from asking other people questions about what I should be doing,
+because I don't want to rely too much on other people.
+Like, some of my friends are [amazing with React](https://github.com/Rodentman87) and would be able to help me with pretty much anything,
+but I'd probably get a better understanding if I'm able to do things on my own --
+only AFTER would I ask if I did something well, or for more details on what something does, etc.
+
+Does that make sense? Good. Now let's figure out everything else.
+
+---
+
+# Syntax highlighting
+
+There's an entire [guide on this](https://mdxjs.com/guides/syntax-highlighting/), so it should be easy, right?
+
+## It's never that easy
+
+Immediately I noticed that neither of the examples work with how my code looks.
+I stumbled around and googled endlessly until I finally pieced together how to do it.
+
+Except, uh oh.
+
+![The tags are flashing in devtools, which is never a good sign.](/public/posts/flashing-syntax-highlighting.gif)
+
+Okay, let's just uh, disable that for now...
+
+---
+
+# GFM
+
+Earlier, when writing about syntax highlighting, I wanted some strikethrough!
+That's not included by default, so let's add it using my favorite thing ever: GitHub Flavored Markdown!
+
+Okay, so I just install the module, add it as a remark plugin, and we should be good to go, right?
+
+## It's never that easy 2: Electric Boogaloo
+
+Check this out: ~~working strikethrough!~~ ... What do you mean it's not working?
+
+The [guide](https://mdxjs.com/guides/gfm/) tells me to do **a single thing**. I did that thing. It's not working.
+
+---
+
+# "Conclusion"
+
+Modern webdev seems wonderful. Everyone uses the modern methods for a reason, right?
+But I'm here with my ancient HTML & CSS knowledge, and the only "dynamic" stuff I do is either server-side or some slapped together JS.
+So moving to an ecosystem which is almost entirely JS, with a bunch of concepts that I've never heard of before, isn't very easy, to say the least.
+
+I picked React because I hear about it the most, and some of my really good friends use it. Others say use Vue, or Svelte, or whatever.
+I'm sure they're all great, but I'd rather mess with React since it seems like the most people use it.
+
+But then there's the problem of... how do I practice React? I don't have site projects to work on!
+I mean, everyone makes a blog, right? So I'll just make a blog! But it feels like I could have done this pretty easily with some basic HTML, CSS and some server-side thing such as Django.
+
+It feels like, instead of just learning React, I have to learn all of these things alongside it, like how Vite works, how MDX works,
+using Tailwind, etc. It's definitely a lot to take in, and while I didn't *have* to use MDX or Tailwind, I wanted to. I'll just... ask a friend for help later.
+
+### I guess I just wish I didn't feel so helpless.
