@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import ButtonLink from '../components/ButtonLink';
 
 function Blog() {
     const { slug } = useParams();
@@ -13,7 +14,7 @@ function Blog() {
     const [content, setContent] = useState();
     const [dateTime, setDateTime] = useState(new Date());
 
-    /*const props = {
+    const props = {
         components: {
             code: (props) => {
                 const match = /language-(\w+)/.exec(props.className || '')
@@ -22,13 +23,13 @@ function Blog() {
                   : <code className={props.className} {...props} />
             }
         }
-    }*/
+    }
 
     useEffect(() => {
         import(`./posts/${slug}.mdx`).then((data) => {
             setMeta(data.meta);
-            //setContent(data.default(props));
-            setContent(data.default); // Disable syntax highlighting for now... :/
+            setContent(data.default(props));
+            //setContent(data.default); // Disable syntax highlighting for now... :/
             setDateTime(new Date(data.meta.date * 1000));
         }).catch(() => {
             // Not found!
@@ -47,9 +48,9 @@ function Blog() {
                 <hr className="mt-16"/>
             </article>
             <footer className="mt-16 mb-16 m-auto">
-                <Link to="/blog" className="dark:bg-gray-800 dark:text-white px-6 py-2 rounded-md dark:hover:bg-gray-700 transition duration-300">
+                <ButtonLink to="/blog">
                     Back to blog
-                </Link>
+                </ButtonLink>
             </footer>
         </div>
     )

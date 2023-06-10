@@ -1,3 +1,4 @@
+import ButtonLink from "../components/ButtonLink";
 
 function Home() {
     return (
@@ -5,15 +6,15 @@ function Home() {
             <h1 className="text-4xl font-bold text-gray-800 dark:text-white text-center">Nyako</h1>
             <p className="text-gray-600 dark:text-gray-300 text-center">Soft girl, cat, 100 cm (39 ¼ &quot;)</p>
             <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-                <a href="https://twitter.com/Nyakorita/" className="dark:bg-gray-800 dark:text-white px-6 py-2 rounded-md dark:hover:bg-gray-700 transition duration-300">
+                <ButtonLink to="https://twitter.com/NyakoFox" outside>
                     Twitter
-                </a>
-                <a href="https://bsky.app/profile/nyako.gay" className="dark:bg-gray-800 dark:text-white px-6 py-2 rounded-md dark:hover:bg-gray-700 transition duration-300">
+                </ButtonLink>
+                <ButtonLink to="https://bsky.app/profile/nyako.gay" outside>
                     Bluesky
-                </a>
-                <a href="https://www.youtube.com/@nyakofox" className="dark:bg-gray-800 dark:text-white px-6 py-2 rounded-md dark:hover:bg-gray-700 transition duration-300">
+                </ButtonLink>
+                <ButtonLink to="https://www.youtube.com/@nyakofox" outside>
                     YouTube
-                </a>
+                </ButtonLink>
             </div>
         </div>
     )
