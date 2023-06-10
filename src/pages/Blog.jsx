@@ -7,7 +7,7 @@ function Blog() {
             <p className="text-gray-600 dark:text-gray-300 text-center">Insane person rambles about insane things.</p>
             <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
                 <ButtonLink to="/blog/test">
-                    First Post, because this UI is unfinished
+                    Doesn&apos;t everyone have one of these?
                 </ButtonLink>
             </div>
         </div>

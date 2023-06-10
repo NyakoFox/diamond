@@ -13,7 +13,7 @@ So I thought, hey, you know what? What if I did one too? So I made one. Don't lo
 
 Pages are written in [MDX](https://mdxjs.com/), with a meta object at the top of the file, looking something like the following:
 
-```jsx
+```javascript
 export const meta = {
   title: 'Doesn\'t everyone have one of these?',
   description: `Everyone's first React project is a blog, isn't it?`,
@@ -56,6 +56,10 @@ Except, uh oh.
 
 Okay, let's just uh, disable that for now...
 
+## It's sorta that easy
+
+Forgot the second argument of `useEffect` -- it was supposed to be an empty array. That's working now.
+
 ---
 
 # GFM
@@ -67,9 +71,13 @@ Okay, so I just install the module, add it as a remark plugin, and we should be 
 
 ## It's never that easy 2: Electric Boogaloo
 
-Check this out: ~~working strikethrough!~~ ... What do you mean it's not working?
+Check this out: \~\~working strikethrough!\~\~ ... What do you mean it's not working?
 
 The [guide](https://mdxjs.com/guides/gfm/) tells me to do **a single thing**. I did that thing. It's not working.
+
+## It's actually that easy
+
+Turns out if you put the array in the wrong place, it doesn't work.
 
 ---
 

@@ -4,6 +4,11 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import ButtonLink from '../components/ButtonLink';
 
+const aliases = {
+    js: 'javascript',
+    jsx: 'javascript',
+}
+
 function Blog() {
     const { slug } = useParams();
     const [meta, setMeta] = useState({
@@ -19,7 +24,7 @@ function Blog() {
             code: (props) => {
                 const match = /language-(\w+)/.exec(props.className || '')
                 return match
-                  ? <SyntaxHighlighter style={dracula} language={match[1]} PreTag="div" {...props} />
+                  ? <SyntaxHighlighter style={dracula} language={aliases[match[1]] || match[1]} PreTag="div" {...props} />
                   : <code className={props.className} {...props} />
             }
         }
@@ -34,7 +39,7 @@ function Blog() {
         }).catch(() => {
             // Not found!
         });
-    });
+    }, []);
 
     return (
         <div className="container mx-auto p-4 flex flex-col align-middle justify-items-center w-full">
