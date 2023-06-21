@@ -34,7 +34,6 @@ function Blog() {
         import(`./posts/${slug}.mdx`).then((data) => {
             setMeta(data.meta);
             setContent(data.default(props));
-            //setContent(data.default); // Disable syntax highlighting for now... :/
             setDateTime(new Date(data.meta.date * 1000));
         }).catch(() => {
             // Not found!
