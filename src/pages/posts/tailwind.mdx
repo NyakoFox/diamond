@@ -1,0 +1,50 @@
+export const meta = {
+  title: 'Tailwind',
+  description: `Professionally written.`,
+  date: 1686086481
+}
+
+# What's that?
+
+So, for this website, I decided to use [Tailwind CSS](https://tailwindcss.com/). It's a CSS framework where there's pretty much just a class for everything.
+
+Take the following CSS, for example:
+
+```css
+.card {
+  max-width: 256px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: black;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: center;
+}
+```
+Now, we can make the exact same thing using Tailwind CSS:
+
+```htmlbars
+<div className="max-w-[256px] p-4 rounded-lg bg-black text-xl text-center">
+  Hello world!
+</div>
+```
+
+Clean, quick and simple. Right?
+
+-----
+
+# I have a problem with it.
+
+Well, like, I don't know if I like it.
+
+I mean, it's probably great for people who are comfortable with it! But it just seems like it's a lot more thinking than CSS normally requires.
+And then lines of classes get super long, you lose the ability to reuse classes (yes, I know about components, but inspect element doesn't!)
+and it just feels like it makes things harder despite the goal be to make things easier.
+
+With my example above, how do I remember any of that? `rounded-lg`? `text-xl`?
+What are these magic sizes? How was I supposed to guess `rounded` from `border-radius`?
+I guess it's another list of things I have to learn, but won't I get Tailwind mixed up with vanilla CSS?
+
+-----
+
+# TODO

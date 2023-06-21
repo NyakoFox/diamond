@@ -6,8 +6,8 @@ function About() {
             <p className="text-gray-600 dark:text-gray-300 text-center">Or Ally, or Alexia, or Alexandra, or-</p>
 
             <section className="mt-8">
-            <p className="text-gray-600 dark:text-gray-300 text-center">I&apos;m a ~185 cm (6&apos;1&quot;) tall catgirl.</p>
-            <p className="text-gray-600 dark:text-gray-300 text-center">I&apos;m a software developer, musician, and artist (sometimes).</p>
+                <p className="text-gray-600 dark:text-gray-300 text-center">I&apos;m a software developer, musician, and artist (sometimes).</p>
+                <p className="text-gray-600 dark:text-gray-300 text-center">I like to make things.</p>
             </section>
         </div>
     )

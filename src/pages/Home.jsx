@@ -15,6 +15,9 @@ function Home() {
                 <ButtonLink to="https://www.youtube.com/@nyakofox" outside>
                     YouTube
                 </ButtonLink>
+                <ButtonLink to="https://github.com/NyakoFox" outside>
+                    GitHub
+                </ButtonLink>
             </div>
         </div>
     )
